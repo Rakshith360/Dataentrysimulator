@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=1280">
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'none';
   script-src 'self' 'unsafe-inline';
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
   font-src https://fonts.gstatic.com;
   img-src 'self' data:;
-  connect-src 'none';
+  connect-src https://fonts.googleapis.com https://fonts.gstatic.com;
   object-src 'none';
   frame-src 'none';
   frame-ancestors 'none';
@@ -101,7 +101,7 @@ body{
 /* View tabs — glass pill buttons */
 .view-tabs{display:flex;margin-left:12px;gap:2px}
 .view-tab{
-  font-family:'GulfUI',sans-serif;font-size:11px;font-weight:600;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;
   padding:3px 14px;cursor:pointer;letter-spacing:.3px;
   border-radius:12px;
   border:1px solid rgba(200,140,0,.3);
@@ -136,7 +136,7 @@ body{
 
 /* Difficulty badge */
 .difficulty-badge{
-  font-family:'GulfUI',sans-serif;font-size:10px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:700;
   padding:2px 10px;border-radius:10px;cursor:pointer;
   border:1px solid;letter-spacing:.5px;
   backdrop-filter:blur(8px);
@@ -148,7 +148,7 @@ body{
 
 /* Pause & shortcut buttons */
 .pause-topbtn{
-  font-family:'GulfUI',sans-serif;font-size:10px;font-weight:600;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;
   padding:2px 10px;cursor:pointer;border-radius:10px;
   border:1px solid rgba(80,180,60,.4);
   color:#88dd66;background:rgba(20,60,10,.4);
@@ -177,6 +177,7 @@ body{
   background:linear-gradient(90deg,
     rgba(80,40,0,.6) 0%,rgba(120,60,0,.4) 50%,rgba(80,40,0,.6) 100%);
   backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
   border-top:1px solid rgba(180,100,0,.2);
   border-bottom:1px solid rgba(180,100,0,.25);
   padding:3px 12px;
@@ -201,6 +202,7 @@ body{
   width:360px;min-width:300px;
   background:rgba(252,244,220,.92);
   backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
   border-right:1px solid rgba(180,120,0,.35);
   display:flex;flex-direction:column;overflow:hidden;
   box-shadow:
@@ -212,7 +214,7 @@ body{
     rgba(220,150,30,.9) 0%,rgba(160,100,20,.95) 100%);
   backdrop-filter:blur(10px);
   padding:5px 10px;
-  font-family:'GulfUI',sans-serif;font-size:12px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;
   color:#1a0800;letter-spacing:.3px;
   border-bottom:1px solid rgba(200,130,0,.4);
   display:flex;justify-content:space-between;align-items:center;flex-shrink:0;
@@ -222,7 +224,7 @@ body{
 .doc-nav button{
   background:linear-gradient(180deg,rgba(80,50,8,.9) 0%,rgba(50,30,4,.95) 100%);
   color:var(--gold2);border:1px solid rgba(180,120,0,.5);
-  font-family:'GulfUI',sans-serif;font-size:11px;font-weight:600;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;
   padding:2px 8px;cursor:pointer;border-radius:8px;
   box-shadow:inset 0 1px 0 rgba(255,220,80,.2);
   transition:all .12s;
@@ -474,7 +476,7 @@ body{
   box-shadow:inset 0 1px 0 rgba(255,200,80,.1);
 }
 .monitor-brand{
-  font-family:'GulfUI',sans-serif;font-size:11px;font-weight:300;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:300;
   color:rgba(180,130,40,.7);letter-spacing:3px;text-transform:uppercase;
 }
 .monitor-lights{display:flex;gap:6px}
@@ -511,14 +513,14 @@ body{
 /* ══════════════════════════════════════════
    SPREADSHEET GRID — glass skin (amber tint)
 ══════════════════════════════════════════ */
-.excel-wrap{font-family:'GulfUI','Tamara',sans-serif;font-size:11px;background:#ddeee8;color:#000;min-height:460px;display:flex;flex-direction:column}
+.excel-wrap{font-family:'Segoe UI','Helvetica Neue',Arial,'Tamara',sans-serif;font-size:11px;background:#ddeee8;color:#000;min-height:460px;display:flex;flex-direction:column}
 
 /* Title bar: glass amber gradient */
 .xl-titlebar{
   background:linear-gradient(180deg,#3a7a6a 0%,#1e5a4a 40%,#0e3a2e 100%);
   color:white;padding:3px 7px;font-size:11px;font-weight:600;
   display:flex;justify-content:space-between;align-items:center;
-  font-family:'GulfUI',sans-serif;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.25);
 }
 .xl-title-left{display:flex;align-items:center;gap:6px}
@@ -533,7 +535,7 @@ body{
 .xl-winbtn.close:hover{background:linear-gradient(180deg,#ff7060 0%,#cc2010 100%);color:white;border-color:#cc2010}
 
 /* Menubar: warm classic style */
-.xl-menubar{background:linear-gradient(180deg,#d8e8e0 0%,#c0d4cc 100%);border-bottom:1px solid #708880;padding:2px 4px;display:flex;font-family:'GulfUI',sans-serif;font-size:11px}
+.xl-menubar{background:linear-gradient(180deg,#d8e8e0 0%,#c0d4cc 100%);border-bottom:1px solid #708880;padding:2px 4px;display:flex;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px}
 .xl-menu{padding:2px 9px;cursor:pointer;border:1px solid transparent;border-radius:3px}
 .xl-menu:hover{
   background:linear-gradient(180deg,rgba(255,200,80,.4) 0%,rgba(200,140,20,.3) 100%);
@@ -547,7 +549,7 @@ body{
   border:1px solid transparent;padding:1px 4px;font-size:11px;
   cursor:pointer;min-width:22px;height:22px;
   display:flex;align-items:center;justify-content:center;
-  font-family:'GulfUI',sans-serif;border-radius:3px;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;border-radius:3px;
 }
 .xl-tbtn:hover{
   background:linear-gradient(180deg,rgba(60,180,140,.4) 0%,rgba(20,140,100,.3) 100%);
@@ -556,7 +558,7 @@ body{
 .xl-sep{width:1px;height:18px;background:rgba(120,90,40,.4);margin:0 3px}
 .xl-font-box,.xl-size-box{
   border:1px solid #a09070;background:white;
-  padding:1px 4px;font-size:11px;font-family:'GulfUI',sans-serif;height:22px;
+  padding:1px 4px;font-size:11px;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;height:22px;
   border-radius:2px;
 }
 .xl-font-box{width:90px}.xl-size-box{width:36px}
@@ -565,11 +567,11 @@ body{
 .xl-formulabar{
   background:linear-gradient(180deg,#e0d8c0 0%,#d0c8b0 100%);
   border-bottom:1px solid #a09070;padding:2px 4px;
-  display:flex;align-items:center;gap:4px;font-family:'GulfUI',sans-serif;font-size:11px;
+  display:flex;align-items:center;gap:4px;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;
 }
-.xl-namebox{border:1px solid #608878;background:white;width:56px;height:20px;padding:1px 4px;font-size:11px;font-family:'GulfUI',sans-serif;border-radius:2px;text-align:center}
+.xl-namebox{border:1px solid #608878;background:white;width:56px;height:20px;padding:1px 4px;font-size:11px;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;border-radius:2px;text-align:center}
 .xl-fx{color:#0e6a50;font-weight:700;font-size:14px;padding:0 5px}
-.xl-formulainput{flex:1;border:1px solid #608878;background:white;height:20px;padding:1px 4px;font-family:'GulfUI',sans-serif;font-size:11px;border-radius:2px}
+.xl-formulainput{flex:1;border:1px solid #608878;background:white;height:20px;padding:1px 4px;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;border-radius:2px}
 
 /* Sheet area */
 .xl-sheet-area{min-height:220px;display:flex;flex:1;overflow:auto;background:white;max-height:360px}
@@ -581,7 +583,7 @@ body{
   border-radius:2px;
 }
 .xl-table-wrap{overflow:auto;flex:1}
-table.xl-grid{border-collapse:collapse;table-layout:fixed;font-family:'GulfUI',sans-serif;font-size:11px}
+table.xl-grid{border-collapse:collapse;table-layout:fixed;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px}
 
 .xl-corner{
   background:linear-gradient(135deg,#e0d8c0 0%,#c8c0a8 100%);
@@ -591,7 +593,7 @@ table.xl-grid{border-collapse:collapse;table-layout:fixed;font-family:'GulfUI',s
 .xl-colhead{
   background:linear-gradient(180deg,#ddd5bb 0%,#c0b898 100%);
   border-right:1px solid #a09070;border-bottom:2px solid #907858;
-  text-align:center;font-family:'GulfUI',sans-serif;font-size:11px;font-weight:600;
+  text-align:center;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;
   height:20px;padding:1px 4px;position:sticky;top:0;z-index:5;
   min-width:90px;user-select:none;cursor:pointer;color:#3a2800;
 }
@@ -599,7 +601,7 @@ table.xl-grid{border-collapse:collapse;table-layout:fixed;font-family:'GulfUI',s
 .xl-rowhead{
   background:linear-gradient(90deg,#ddd5bb 0%,#c0b898 100%);
   border-right:2px solid #907858;border-bottom:1px solid #a09070;
-  text-align:center;font-family:'GulfUI',sans-serif;font-size:11px;
+  text-align:center;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;
   height:20px;width:32px;position:sticky;left:0;z-index:4;
   user-select:none;cursor:pointer;color:#3a2800;
 }
@@ -628,7 +630,7 @@ td.xl-cell.error-cell{background:rgba(255,180,160,.4) !important;outline:2px sol
 td.xl-cell.warning-cell{background:rgba(255,255,180,.5) !important;outline:1px solid #cc9900}
 td.xl-cell input{
   width:100%;height:100%;border:none;outline:none;background:transparent;
-  font-family:'GulfUI',sans-serif;font-size:11px;padding:0 3px;color:#000;cursor:default;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;padding:0 3px;color:#000;cursor:default;
   /* Paste is blocked via JS — no additional CSS needed here */
   -webkit-user-select:text;user-select:text; /* allow text selection for reading */
 }
@@ -645,7 +647,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 .xl-sheettabs{
   background:linear-gradient(180deg,#d8d0b8 0%,#c8c0a8 100%);
   border-top:1px solid #a09070;padding:2px 4px 0;
-  display:flex;gap:2px;font-family:'GulfUI',sans-serif;font-size:11px;align-items:flex-end;
+  display:flex;gap:2px;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;align-items:flex-end;
 }
 .xl-tab{
   background:linear-gradient(180deg,#c8dcd4 0%,#b0c8c0 100%);
@@ -659,7 +661,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 .xl-statusbar{
   background:linear-gradient(180deg,#c8c0a8 0%,#b8b098 100%);
   border-top:1px solid #a09070;
-  padding:2px 8px;font-family:'GulfUI',sans-serif;font-size:11px;
+  padding:2px 8px;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;
   display:flex;justify-content:space-between;align-items:center;color:#3a2800;
 }
 .xl-status-right{display:flex;gap:16px;font-size:10px}
@@ -712,7 +714,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   backdrop-filter:blur(20px);
   border:1px solid rgba(80,180,40,.5);
   color:#88ff44;
-  font-family:'GulfUI',sans-serif;font-size:12px;font-weight:600;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:600;
   padding:7px 18px;border-radius:20px;
   box-shadow:
     inset 0 1px 0 rgba(180,255,100,.15),
@@ -773,12 +775,12 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
     0 0 60px rgba(60,180,0,.25),
     0 8px 40px rgba(0,0,0,.7);
 }
-.complete-title{font-family:'GulfUI',sans-serif;font-size:22px;font-weight:300;color:#88ff44;letter-spacing:4px;text-transform:uppercase}
+.complete-title{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:22px;font-weight:300;color:#88ff44;letter-spacing:4px;text-transform:uppercase}
 .complete-grade{font-family:'Orbitron',monospace;font-size:56px;margin:8px 0;text-shadow:0 0 24px currentColor}
 .grade-S{color:#ffd700}.grade-A{color:#88ff44}.grade-B{color:#44ccff}.grade-C{color:#ffcc33}.grade-D{color:#ff8844}.grade-F{color:#ff4444}
 .complete-stats{font-size:11.5px;color:#88cc44;margin-top:10px;text-align:left}
 .complete-remark{
-  font-family:'GulfUI',sans-serif;font-size:12px;font-weight:300;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:300;
   color:rgba(180,240,160,.8);margin-top:10px;
   border-top:1px solid rgba(80,180,40,.2);padding-top:8px;letter-spacing:.3px;
 }
@@ -787,7 +789,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   background:linear-gradient(180deg,rgba(60,120,10,.8) 0%,rgba(30,70,5,.9) 100%);
   backdrop-filter:blur(8px);
   border:1px solid rgba(100,200,40,.4);color:#88ff44;
-  font-family:'GulfUI',sans-serif;font-size:12px;font-weight:600;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:600;
   padding:8px 24px;cursor:pointer;border-radius:20px;letter-spacing:.5px;
   box-shadow:inset 0 1px 0 rgba(180,255,80,.15),0 2px 10px rgba(0,0,0,.4);
   transition:all .15s;
@@ -801,7 +803,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 ══════════════════════════════════════════ */
 .stats-wrap{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:14px}
 .stats-header{
-  font-family:'GulfUI',sans-serif;font-size:16px;font-weight:300;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:16px;font-weight:300;
   color:#44aaff;letter-spacing:4px;text-align:center;text-transform:uppercase;
   padding-bottom:10px;border-bottom:1px solid rgba(0,80,140,.3);
   text-shadow:0 0 12px rgba(40,140,220,.4);
@@ -844,7 +846,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   border-radius:10px;overflow:hidden;
 }
 .history-header{
-  font-family:'GulfUI',sans-serif;font-size:12px;font-weight:300;color:#44aaff;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:300;color:#44aaff;
   padding:8px 14px;background:rgba(0,8,20,.6);
   border-bottom:1px solid rgba(0,50,100,.4);letter-spacing:3px;text-transform:uppercase;
 }
@@ -857,7 +859,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   border:1px solid rgba(10,60,4,.4);border-radius:10px;padding:14px 16px;
 }
 .tip-header{
-  font-family:'GulfUI',sans-serif;font-size:12px;font-weight:300;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:300;
   color:#44cc22;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;
   text-shadow:0 0 8px rgba(40,180,10,.3);
 }
@@ -875,12 +877,12 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   padding:24px 32px;text-align:center;max-width:400px;
   box-shadow:inset 0 1px 0 rgba(255,100,80,.1),0 0 40px rgba(180,0,0,.2),0 8px 30px rgba(0,0,0,.6);
 }
-.interrupt-title{font-family:'GulfUI',sans-serif;font-size:18px;font-weight:300;color:#ff6666;letter-spacing:2px;margin-bottom:10px;text-transform:uppercase}
+.interrupt-title{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:18px;font-weight:300;color:#ff6666;letter-spacing:2px;margin-bottom:10px;text-transform:uppercase}
 .interrupt-msg{font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(220,140,120,.8);line-height:1.7;margin-bottom:16px}
 .interrupt-btn{
   background:linear-gradient(180deg,rgba(60,6,6,.8) 0%,rgba(40,4,4,.9) 100%);
   backdrop-filter:blur(8px);border:1px solid rgba(180,40,20,.4);color:#ff6666;
-  font-family:'GulfUI',sans-serif;font-size:12px;font-weight:600;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:600;
   padding:6px 22px;cursor:pointer;border-radius:14px;letter-spacing:.5px;
   transition:all .15s;
 }
@@ -893,14 +895,14 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   position:fixed;bottom:22px;left:22px;
   background:rgba(4,8,30,.88);backdrop-filter:blur(20px);
   border:1px solid rgba(50,80,200,.4);color:#aabbff;
-  font-family:'GulfUI',sans-serif;font-size:11px;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;
   padding:10px 14px;border-radius:12px;
   box-shadow:inset 0 1px 0 rgba(100,140,255,.1),0 4px 20px rgba(0,0,0,.5);
   z-index:999;opacity:0;transition:opacity .3s;pointer-events:none;max-width:280px;line-height:1.6;
 }
 .supervisor-toast.show{opacity:1}
 .supervisor-toast .sup-name{
-  font-family:'GulfUI',sans-serif;font-size:11px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:700;
   color:#88aaff;display:block;margin-bottom:3px;letter-spacing:.2px;
 }
 
@@ -917,12 +919,12 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   padding:32px 56px;text-align:center;
   box-shadow:inset 0 1px 0 rgba(255,220,80,.15),0 0 50px rgba(0,0,0,.7);
 }
-.pause-title{font-family:'GulfUI',sans-serif;font-size:32px;font-weight:200;color:var(--gold2);letter-spacing:6px;text-transform:uppercase;text-shadow:0 0 16px rgba(255,200,0,.4)}
+.pause-title{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:32px;font-weight:200;color:var(--gold2);letter-spacing:6px;text-transform:uppercase;text-shadow:0 0 16px rgba(255,200,0,.4)}
 .pause-sub{font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(180,130,0,.6);margin-top:6px;letter-spacing:1px}
 .pause-btn{
   background:linear-gradient(180deg,rgba(80,50,0,.8) 0%,rgba(50,30,0,.9) 100%);
   backdrop-filter:blur(8px);border:1px solid rgba(200,140,0,.4);color:var(--gold2);
-  font-family:'GulfUI',sans-serif;font-size:14px;font-weight:600;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:14px;font-weight:600;
   padding:9px 32px;cursor:pointer;border-radius:18px;margin-top:16px;letter-spacing:1px;
   box-shadow:inset 0 1px 0 rgba(255,220,80,.15);transition:all .15s;
 }
@@ -937,8 +939,8 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   padding:22px 28px;min-width:360px;
   box-shadow:inset 0 1px 0 rgba(80,140,255,.08),0 8px 30px rgba(0,0,0,.6);
 }
-.shortcuts-title{font-family:'GulfUI',sans-serif;font-size:13px;font-weight:300;color:#66aaff;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;border-bottom:1px solid rgba(30,60,160,.3);padding-bottom:6px}
-.shortcut-row{display:flex;justify-content:space-between;align-items:center;font-family:'GulfUI',sans-serif;font-size:11px;color:rgba(80,140,220,.8);padding:5px 0;border-bottom:1px solid rgba(10,30,80,.3)}
+.shortcuts-title{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:300;color:#66aaff;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;border-bottom:1px solid rgba(30,60,160,.3);padding-bottom:6px}
+.shortcut-row{display:flex;justify-content:space-between;align-items:center;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;color:rgba(80,140,220,.8);padding:5px 0;border-bottom:1px solid rgba(10,30,80,.3)}
 .shortcut-row:last-of-type{border-bottom:none}
 .shortcut-key{
   background:rgba(10,20,60,.7);backdrop-filter:blur(6px);
@@ -949,7 +951,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 .shortcuts-close{
   margin-top:14px;background:rgba(10,20,60,.7);backdrop-filter:blur(6px);
   border:1px solid rgba(40,80,200,.35);color:#66aaff;
-  font-family:'GulfUI',sans-serif;font-size:11px;font-weight:600;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;
   padding:5px 0;cursor:pointer;border-radius:10px;width:100%;
   transition:all .15s;letter-spacing:.5px;
 }
@@ -1001,7 +1003,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   border:1px solid rgba(10,60,4,.35);border-radius:10px;overflow:hidden;
 }
 .heatmap-header{
-  font-family:'GulfUI',sans-serif;font-size:12px;font-weight:300;color:#44cc22;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:300;color:#44cc22;
   padding:8px 14px;background:rgba(2,14,2,.6);
   border-bottom:1px solid rgba(10,60,4,.35);letter-spacing:3px;text-transform:uppercase;
 }
@@ -1015,7 +1017,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 
 /* ── JOB MODE BUTTONS ── */
 .job-mode-btn{
-  font-family:'GulfUI',sans-serif;font-size:10px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:700;
   padding:2px 10px;cursor:pointer;letter-spacing:.3px;
   border-radius:10px;
   border:1px solid rgba(200,140,0,.3);
@@ -1039,6 +1041,71 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 }
 /* TK sheet tab color */
 .xl-tab.tk-tab.active{background:#e8f4e8;font-weight:700;border-bottom:1px solid #e8f4e8;position:relative;bottom:-1px}
+
+/* ══════════════════════════════════════════════════════
+   CROSS-BROWSER COMPATIBILITY FIXES
+   Tested: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
+══════════════════════════════════════════════════════ */
+
+/* Firefox: scrollbar-width shorthand */
+* { scrollbar-width: thin; scrollbar-color: rgba(180,120,0,.5) rgba(220,190,140,.2); }
+
+/* Safari: fix flex gap fallback (pre-14.1) */
+@supports not (gap: 1px) {
+  .top-stats .stat-item + .stat-item { margin-left: 10px; }
+  .view-tabs .view-tab + .view-tab { margin-left: 2px; }
+  .complete-btns .complete-btn + .complete-btn { margin-left: 10px; }
+}
+
+/* IE/old Edge: clip-path fallback (they ignore it, show rectangle) */
+/* Firefox: clip-path polygon is supported since FF 54 — no action needed */
+
+/* Safari < 15.4: backdrop-filter requires -webkit- prefix — already added inline.
+   For any class using CSS var --glass-blur or --aero-blur, add explicit webkit prefix: */
+.top-bar, .glass, .doc-panel, .monitor, .feedback-toast,
+.complete-box, .wg-box, .md-box, #mobileWarning, #welcomeGate .wg-box {
+  -webkit-backdrop-filter: saturate(1.8) blur(18px);
+}
+.challenge-strip {
+  -webkit-backdrop-filter: blur(12px);
+}
+.doc-header, .complete-btn, .pause-topbtn, .difficulty-badge,
+.job-mode-btn, .view-tab {
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Firefox: accent-color for checkboxes — supported since FF 92 */
+/* Edge Legacy: doesn't support accent-color — falls back to default blue (acceptable) */
+
+/* Chrome/Safari: smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* All browsers: prevent text-size-adjust on rotate */
+html { -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+/* min-width ensures desktop layout on any browser that renders at full width */
+body { min-width: 1024px; }
+
+/* Firefox: fix custom scrollbars (webkit ones are ignored) */
+.doc-scroll, .xl-sheet-area, .wg-policy, .wg-terms {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(180,120,0,.5) rgba(220,190,140,.15);
+}
+
+/* Safari: fix position:sticky inside overflow:hidden containers */
+.xl-colhead, .xl-rowhead {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+/* Edge/Firefox: ensure SVG cable overflow is visible */
+#cableSVG { overflow: visible; }
+
+/* All browsers: force hardware acceleration for animations */
+.mw-box, .feedback-toast, .complete-overlay { will-change: transform, opacity; }
+
+/* Firefox: fix canvas rendering */
+#wpmSparkline { image-rendering: crisp-edges; image-rendering: -moz-crisp-edges; }
 </style>
 </head>
 
@@ -1052,7 +1119,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 
 /* ── JOB MODE BUTTONS ── */
 .job-mode-btn{
-  font-family:'GulfUI',sans-serif;font-size:10px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:700;
   padding:2px 10px;cursor:pointer;letter-spacing:.3px;
   border-radius:10px;
   border:1px solid rgba(200,140,0,.3);
@@ -1088,7 +1155,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   background:radial-gradient(ellipse 100% 100% at 50% 0%,
     rgba(180,100,0,.18) 0%,transparent 60%),
     #060400;
-  font-family:'GulfUI',sans-serif;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;
   overflow-y:auto;
   overflow-x:hidden;
   padding:30px 12px 40px;
@@ -1255,7 +1322,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 /* enter button */
 .wg-enter-btn{
   display:block;width:100%;padding:13px;
-  font-family:'GulfUI',sans-serif;font-size:14px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:14px;font-weight:700;
   letter-spacing:2px;text-transform:uppercase;
   border-radius:10px;cursor:pointer;
   border:1px solid rgba(200,140,0,.5);
@@ -1373,7 +1440,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 
 .md-proceed-btn{
   display:block;width:100%;padding:12px;
-  font-family:'GulfUI',sans-serif;font-size:13px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:700;
   letter-spacing:2px;text-transform:uppercase;
   border-radius:10px;cursor:pointer;
   border:1px solid rgba(200,140,0,.5);
@@ -1466,7 +1533,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   z-index:2;
 }
 .boot-win-name{
-  font-family:'GulfUI',sans-serif;font-size:22px;font-weight:300;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:22px;font-weight:300;
   color:#fff;letter-spacing:1px;
 }
 .boot-win-name span{font-weight:700;}
@@ -1667,7 +1734,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   flex-direction:column;
   overflow:hidden;
   cursor:default;
-  font-family:'GulfUI',Tamara,sans-serif;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;
 }
 #win98Desktop.active{ display:flex; }
 
@@ -1780,7 +1847,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 }
 .w98-clock{
   font-size:8.5px;color:#000;
-  font-family:'GulfUI',Tamara,sans-serif;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;
   white-space:nowrap;
 }
 .w98-tray-icon{font-size:11px;}
@@ -1793,7 +1860,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   border-top:1.5px solid #888;border-left:1.5px solid #888;
   border-right:1.5px solid #fff;border-bottom:1.5px solid #fff;
   font-size:8px;color:#000;cursor:pointer;
-  font-family:'GulfUI',Tamara,sans-serif;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
   user-select:none;
 }
@@ -1883,7 +1950,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   border-radius:8px;
 }
 .md-level-title{
-  font-family:'GulfUI',sans-serif;font-size:11px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:700;
   color:var(--gold);letter-spacing:1px;text-transform:uppercase;
   margin-bottom:10px;
   text-shadow:0 0 8px rgba(200,140,0,.4);
@@ -1924,7 +1991,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 }
 .lv-badge{
   display:inline-block;
-  font-family:'GulfUI',sans-serif;font-size:9px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:700;
   padding:2px 8px;border-radius:8px;letter-spacing:.5px;
   margin-bottom:6px;
 }
@@ -1932,7 +1999,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
 .lv-badge.medium{background:rgba(120,80,0,.4);color:#ffcc55;border:1px solid rgba(220,160,0,.4);}
 .lv-badge.heavy{ background:rgba(120,0,0,.4);color:#ff7777;border:1px solid rgba(220,0,0,.35);}
 .lv-name{
-  font-family:'GulfUI',sans-serif;font-size:13px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:700;
   color:var(--text-bright);margin-bottom:4px;
 }
 .lv-fields-count{
@@ -1940,12 +2007,12 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   color:var(--gold);margin-bottom:6px;
 }
 .lv-desc{
-  font-family:'GulfUI',sans-serif;font-size:10px;color:rgba(200,160,80,.75);
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:10px;color:rgba(200,160,80,.75);
   line-height:1.5;
 }
 .lv-selected-badge{
   display:none;position:absolute;top:6px;right:8px;
-  font-family:'GulfUI',sans-serif;font-size:8px;font-weight:700;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:8px;font-weight:700;
   color:#ffd700;letter-spacing:.5px;
 }
 .lv-card.lv-active .lv-selected-badge{display:block;}
@@ -1959,7 +2026,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   position:fixed;inset:0;z-index:99999;
   background:radial-gradient(ellipse 100% 100% at 50% 50%,#1a0800 0%,#0a0400 60%,#050200 100%);
   align-items:center;justify-content:center;
-  font-family:'GulfUI',sans-serif;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;
 }
 #mobileWarning.show{ display:flex; }
 
@@ -2071,7 +2138,7 @@ td.xl-cell.locked input{color:#888;cursor:not-allowed}
   border:1px solid rgba(220,60,40,.6);
   border-radius:10px;
   color:#ffccbb;
-  font-family:'GulfUI',sans-serif;
+  font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;
   font-size:13px;font-weight:700;
   letter-spacing:.8px;text-transform:uppercase;
   cursor:pointer;
@@ -5764,35 +5831,78 @@ init();
 
 // ══════════════════════════════════════════════════════
 //  MOBILE / SMALL SCREEN DETECTION
+//  Works on: Chrome, Firefox, Safari, Edge, Opera
+//  Checks: viewport width + screen width + user-agent
+//  Triggers on: load, resize, orientationchange
 // ══════════════════════════════════════════════════════
+
+function isMobileOrSmallScreen(){
+  var vw = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 0;
+  if(vw < 1024) return true;
+  if(screen && screen.width < 1024) return true;
+  var ua = navigator.userAgent || '';
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|Tablet/i.test(ua)) return true;
+  if(navigator.maxTouchPoints > 1 && vw < 1280) return true;
+  return false;
+}
+
 function checkMobileWarning(){
-  const warn = document.getElementById('mobileWarning');
+  var warn = document.getElementById('mobileWarning');
   if(!warn) return;
-  // Show if viewport width is less than 1024px (covers phones + tablets)
-  if(window.innerWidth < 1024){
+  if(isMobileOrSmallScreen()){
     warn.classList.add('show');
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
   } else {
     warn.classList.remove('show');
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
   }
 }
 
 function mobileWarningExit(){
-  // Close/navigate away — tries window.close(), falls back to blank page
-  try{ window.close(); }catch(e){}
-  // If window.close() didn't work (most browsers block it unless opened by script)
-  // replace the page with a friendly goodbye
+  try { window.close(); } catch(e){}
   setTimeout(function(){
-    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0a0400;font-family:Segoe UI,sans-serif;flex-direction:column;gap:12px;">'
-      + '<div style="font-size:36px;">🖥️</div>'
-      + '<div style="color:#ff8866;font-size:16px;font-weight:700;">Please open on a Desktop or Laptop</div>'
-      + '<div style="color:rgba(200,160,120,.6);font-size:12px;">Data Entry Training Simulator · For larger screens only</div>'
-      + '</div>';
-  }, 200);
+    try {
+      window.location.href = 'about:blank';
+    } catch(e2) {
+      document.body.innerHTML =
+        '<div style="display:flex;align-items:center;justify-content:center;'
+        + 'height:100vh;background:#0a0400;font-family:Segoe UI,Arial,sans-serif;'
+        + 'flex-direction:column;gap:12px;padding:20px;text-align:center;">'
+        + '<div style="font-size:48px;">&#128421;</div>'
+        + '<div style="color:#ff8866;font-size:18px;font-weight:700;">Please open on a Desktop or Laptop</div>'
+        + '<div style="color:rgba(200,160,120,.7);font-size:13px;max-width:320px;line-height:1.6;">'
+        + 'Data Entry Training Simulator is designed for screens 1024px and wider.</div></div>';
+    }
+  }, 150);
 }
 
-// Run on load and on every resize
+// Run detection at multiple lifecycle points for full browser coverage
+
+// 1. Immediately on script execution
 checkMobileWarning();
-window.addEventListener('resize', checkMobileWarning);
+
+// 2. DOMContentLoaded (cross-browser reliable)
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', checkMobileWarning);
+} else {
+  checkMobileWarning();
+}
+
+// 3. Window load (after fonts/images settle)
+window.addEventListener('load', checkMobileWarning);
+
+// 4. Resize — debounced 120ms
+window.addEventListener('resize', function(){
+  clearTimeout(window._mwResizeTimer);
+  window._mwResizeTimer = setTimeout(checkMobileWarning, 120);
+});
+
+// 5. Orientation change (tablets rotating)
+window.addEventListener('orientationchange', function(){
+  setTimeout(checkMobileWarning, 300);
+});
 
 // ══════════════════════════════════════════════════════════════════
 //  MONITOR CABLES — fully dynamic, anchored to actual monitor rect
