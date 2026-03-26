@@ -2796,19 +2796,31 @@ tr:nth-child(even) td.xl-cell.ghost-cell{ background:#f5f2ec !important; }
               <!-- DEO_TRAINING_v3 file -->
               <div class="w98-icon" id="w98IconFile" ondblclick="w98LaunchExcel()">
                 <svg class="w98-icon-img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                  <!-- XLS file icon -->
-                  <rect x="5" y="2" width="18" height="26" rx="1" fill="#fff" stroke="#c0c0c0" stroke-width="0.8"/>
-                  <polygon points="23,2 28,7 23,7" fill="#c0c0c0" stroke="#808080" stroke-width="0.5"/>
-                  <polygon points="23,2 28,7 23,7" fill="none" stroke="#808080" stroke-width="0.5"/>
-                  <rect x="23" y="7" width="5" height="21" rx="0" fill="#e0e0e0" stroke="#c0c0c0" stroke-width="0.5"/>
-                  <!-- XLS label -->
-                  <rect x="5" y="20" width="18" height="8" fill="#1d6f42" rx="0 0 1 1"/>
-                  <text x="14" y="27" text-anchor="middle" font-size="6" font-weight="700"
-                        font-family="Arial,sans-serif" fill="#fff">.XLS</text>
-                  <!-- Green bar lines in file -->
-                  <line x1="8" y1="10" x2="20" y2="10" stroke="#1d6f42" stroke-width="1.2"/>
-                  <line x1="8" y1="13" x2="20" y2="13" stroke="#1d6f42" stroke-width="1.2"/>
-                  <line x1="8" y1="16" x2="16" y2="16" stroke="#1d6f42" stroke-width="1.2"/>
+                  <!-- DSS custom database-document icon — teal/dark, distinct from spreadsheet -->
+                  <!-- Document body -->
+                  <rect x="4" y="2" width="19" height="25" rx="1.5" fill="#e8f4f0" stroke="#7ab8a8" stroke-width="0.8"/>
+                  <!-- Folded corner -->
+                  <polygon points="23,2 29,8 23,8" fill="#b0d8ce" stroke="#7ab8a8" stroke-width="0.6"/>
+                  <polygon points="23,2 29,8 23,8" fill="none" stroke="#5a9888" stroke-width="0.5"/>
+                  <!-- Right extension for folded corner -->
+                  <rect x="23" y="8" width="6" height="19" rx="0.5" fill="#d0eae4" stroke="#7ab8a8" stroke-width="0.6"/>
+                  <!-- Header band -->
+                  <rect x="4" y="2" width="19" height="6" rx="1.5" fill="#2a8070"/>
+                  <rect x="4" y="6" width="19" height="2" fill="#2a8070"/>
+                  <!-- "DSS" text in header -->
+                  <text x="13" y="7.5" text-anchor="middle" font-size="5" font-weight="900"
+                        font-family="Arial,sans-serif" fill="#d0fff8" letter-spacing="0.8">DSS</text>
+                  <!-- Data rows (simulating a form / record) -->
+                  <rect x="6" y="11" width="5" height="1.5" rx="0.5" fill="#2a8070" opacity="0.5"/>
+                  <rect x="12" y="11" width="9" height="1.5" rx="0.5" fill="#c0ddd8" opacity="0.9"/>
+                  <rect x="6" y="14" width="5" height="1.5" rx="0.5" fill="#2a8070" opacity="0.5"/>
+                  <rect x="12" y="14" width="9" height="1.5" rx="0.5" fill="#c0ddd8" opacity="0.9"/>
+                  <rect x="6" y="17" width="5" height="1.5" rx="0.5" fill="#2a8070" opacity="0.5"/>
+                  <rect x="12" y="17" width="9" height="1.5" rx="0.5" fill="#c0ddd8" opacity="0.9"/>
+                  <!-- Footer stamp area -->
+                  <rect x="4" y="22" width="25" height="5" rx="0 0 1.5 1.5" fill="#2a8070" opacity="0.15"/>
+                  <text x="16" y="26.5" text-anchor="middle" font-size="4.5" font-weight="700"
+                        font-family="Arial,sans-serif" fill="#1a5848" letter-spacing="0.3">DATA FILE</text>
                 </svg>
                 <div class="w98-icon-label">DEO_TRAINING_v3.dss</div>
               </div>
@@ -2910,9 +2922,23 @@ tr:nth-child(even) td.xl-cell.ghost-cell{ background:#f5f2ec !important; }
             <div class="xl-sheet-area">
               <div class="xl-table-wrap"><table class="xl-grid" id="xlGrid"></table></div>
             </div>
-            <div class="xl-sheettabs" id="xlSheetTabs">
-              <div class="xl-tab active" id="mainSheetTab">Employee Data</div>
-              <div class="xl-tab">Tab2</div><div class="xl-tab">Tab3</div>
+            <div class="xl-sheettabs" id="xlSheetTabs" style="justify-content:space-between;align-items:center">
+              <div style="display:flex;gap:2px;align-items:flex-end">
+                <div class="xl-tab active" id="mainSheetTab">Employee Data</div>
+                <div class="xl-tab">Tab2</div><div class="xl-tab">Tab3</div>
+              </div>
+              <button id="submitBatchBtn" onclick="submitBatch()" style="
+                font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:700;
+                background:linear-gradient(180deg,#2a7a5a 0%,#1a5a3a 100%);
+                color:#d0ffe8;border:1px solid #3aaa6a;border-top-color:#5acc8a;border-left-color:#5acc8a;
+                border-right-color:#1a6040;border-bottom-color:#1a6040;
+                padding:2px 14px;cursor:pointer;border-radius:3px;letter-spacing:.3px;
+                box-shadow:inset 0 1px 0 rgba(180,255,200,.25),1px 1px 0 rgba(0,0,0,.3);
+                align-self:center;margin-right:6px;margin-bottom:3px;
+                transition:all .1s;
+              " title="Submit current batch — saves stats and loads fresh data">
+                ✅ SUBMIT BATCH
+              </button>
             </div>
             <div class="xl-statusbar">
               <span id="statusMsg">Ready — click a cell and start typing</span>
@@ -4621,6 +4647,54 @@ function restartSession(){
   document.getElementById('interruptOverlay').classList.remove('show');
   const el=document.getElementById('errLight'); if(el){el.style.background='#220000';el.style.boxShadow='none';}
   init(); switchView('entry');
+}
+
+// ══════════════════════════════════════════════════════
+//  SUBMIT BATCH — saves session stats, shows Stats tab, then reloads fresh data
+// ══════════════════════════════════════════════════════
+function submitBatch(){
+  // 1. Finalise & save the current session stats (same logic as checkCompletion)
+  const elapsed = elapsedSec();
+  const m = Math.floor(elapsed/60), s = elapsed%60;
+  const elapsedMin = (elapsed/60)||0.001;
+  const finalGross = Math.max(0,Math.round((totalTypedChars/5)/elapsedMin));
+  const finalNet   = Math.max(0,Math.round(Math.max(0,totalTypedChars/5 - errors*5)/elapsedMin));
+  const finalCPM   = Math.max(0,Math.round(totalTypedChars/elapsedMin));
+  const finalCorrectWPM = Math.max(0,Math.round((correctChars/5)/elapsedMin));
+  const statusVals = Object.values(cellStatus);
+  const correctCells = statusVals.filter(s=>s==='correct').length;
+  const totalFields  = TOTAL_DOCS*getActiveFields().length;
+  const filledCells  = statusVals.filter(s=>s==='correct'||s==='error').length;
+  const acc = filledCells>0?Math.max(0,Math.round((correctCells/filledCells)*100)):100;
+  const grade = acc>=99&&finalNet>=50?'S':acc>=97&&finalNet>=40?'A':acc>=95&&finalNet>=30?'B':acc>=90?'C':acc>=80?'D':'F';
+
+  // Save to history even if session was partial
+  sessionHistory.unshift({
+    time: new Date().toLocaleString(),
+    wpm: finalNet, grossWpm: finalGross, cpm: finalCPM, correctWpm: finalCorrectWPM,
+    acc, grade, errors, correctFields: correctCells, totalFields,
+    elapsed: String(m).padStart(2,'0')+':'+String(s).padStart(2,'0'),
+    elapsedSecs: elapsed, difficulty, docs: TOTAL_DOCS, mode: jobMode
+  });
+  if(sessionHistory.length>50) sessionHistory.pop();
+  saveStats();
+
+  // 2. Show stats page so user sees their results
+  switchView('stats');
+
+  // 3. After a short pause (so stats renders), reset and load fresh data
+  setTimeout(()=>{
+    stopTimers(); startTime=null;
+    isPaused=false; pausedElapsed=0; pauseStart=null;
+    document.getElementById('pauseOverlay').classList.remove('show');
+    document.getElementById('completeOverlay').classList.remove('show');
+    document.getElementById('interruptOverlay').classList.remove('show');
+    const el=document.getElementById('errLight'); if(el){el.style.background='#220000';el.style.boxShadow='none';}
+    init();
+    // Stay on stats page — user can see stats, switch back when ready
+    switchView('stats');
+    showToast('✅ Batch submitted — stats saved! New data loaded. Switch to Data Entry to continue.','info');
+  }, 400);
 }
 
 // ══════════════════════════════════════════════════════
